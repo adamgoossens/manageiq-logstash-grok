@@ -1,0 +1,6 @@
+[----] I, [2018-06-26T05:04:47.869456 #3938:5b5108]  INFO -- : MIQ(ManageIQ::Providers::StorageManager::SwiftManager::Refresher#refresh) EMS: [private-osp Swift Manager], id: [10000000000002] Refreshing targets for EMS...Complete - Timings {:collect_inventory_for_targets=>0.0025539398193359375, :parse_legacy_inventory=>1.3525843620300293, :parse_targeted_inventory=>1.3526008129119873, :save_inventory=>0.007904291152954102, :ems_refresh=>1.3634345531463623}i
+
+[----] I, [2018-06-26T06:00:13.416249 #2108:5b5108]  INFO -- : MIQ(MiqPriorityWorker::Runner#get_message_via_drb) Message id: [10000000169629], MiqWorker id: [10000000000268], Zone: [default], Role: [ems_metrics_coordinator], Server: [], Ident: [generic], Target id: [], Instance id: [], Task id: [], Command: [Metric::Capture.perf_capture_timer], Timeout: [600], Priority: [20], State: [dequeue], Deliver On: [], Data: [], Args: [], Dequeued in: [3.085347113] seconds
+
+[----] I, [2018-06-26T06:03:11.403527 #2119:5b5108]  INFO -- : MIQ(Metric::Capture.perf_capture_health_check) 0 "realtime" captures on the queue for zone [default]
+
