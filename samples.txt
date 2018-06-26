@@ -4,3 +4,6 @@
 
 [----] I, [2018-06-26T06:03:11.403527 #2119:5b5108]  INFO -- : MIQ(Metric::Capture.perf_capture_health_check) 0 "realtime" captures on the queue for zone [default]
 
+[----] I, [2018-06-26T19:26:11.896129 #2067:5b5108]  INFO -- : MIQ(MiqEmsMetricsProcessorWorker::Runner#get_message_via_drb) Message id: [10000000174502], MiqWorker id: [10000000000264], Zone: [default], Role: [ems_metrics_processor], Server: [], Ident: [ems_metrics_processor], Target id: [], Instance id: [10000000000001], Task id: [], Command: [MiqEnterprise.perf_rollup], Timeout: [1800], Priority: [100], State: [dequeue], Deliver On: [2018-06-26 09:00:00 UTC], Data: [], Args: ["2018-06-26T08:00:00Z", "hourly"], Dequeued in: [9.029531448] seconds
+
+[----] I, [2018-06-26T20:11:06.400880 #2059:5b5108]  INFO -- : MIQ(MiqEmsMetricsProcessorWorker::Runner#get_message_via_drb) Message id: [10000000174748], MiqWorker id: [10000000000263], Zone: [default], Role: [ems_metrics_processor], Server: [], Ident: [ems_metrics_processor], Target id: [], Instance id: [10000000000006], Task id: [], Command: [ManageIQ::Providers::Openstack::CloudManager::Vm.perf_rollup], Timeout: [1800], Priority: [100], State: [dequeue], Deliver On: [2018-06-26 10:00:00 UTC], Data: [], Args: ["2018-06-26T09:00:00Z", "hourly"], Dequeued in: [4.934726169] seconds
