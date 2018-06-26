@@ -11,7 +11,32 @@ Note that this is all solely based on data output in evm.log, and so it is depen
 
 # Installing
 
-## Copying
+## Input and Output
+
+It is assumed that you have the following already configured:
+
+* An input plugin for logstash (e.g. beats)
+* An output plugin for logstash (e.g. elasticsearch)
+
+## Tagging CloudForms logs from Filebeat
+
+By default, the pipeline only acts on incoming logs that are tagged with the `cloudforms` tag (I've made an assumption your logs are coming from filebeat). 
+It is highly recommended that you tag your MIQ/CFME logs with a dedicated tag before they reach logstash, in order to prevent running some expensive 
+regular expressions over log files that will never match.
+
+You can configure your filebeat to do just this by setting up (for example) the following prospectors in `/etc/filebeat/filebeat.yml`:
+
+```
+filebeat.prospectors:
+- type: log
+  enabled: true
+  paths:
+    - /var/www/miq/vmdb/log/evm.log
+
+  tags: ["cloudforms"]
+```
+
+## Copying the pipeline
 
 Copy the file to `/etc/logstash/conf.d`, or wherever your logstash pipeline configuration directory is on your logstash host.
 
@@ -19,10 +44,4 @@ The file `patterns/manageiq` needs to be placed somewhere your pipeline can acce
 default the pipeline will search in `/etc/logstash/patterns`, so if you want to copy this somewhere else you need to replace every occurrence of
 `/etc/logstash/patterns` in the pipeline file with the path to your patterns directory.
 
-## Input and Output
-
-It is assumed that you have the following already configured:
-
-* An input plugin for logstash (e.g. beats)
-* An output plugin for logstash (e.g. elasticsearch)
 
