@@ -9,7 +9,16 @@ following detail out of evm.log:
 
 Note that this is all solely based on data output in evm.log, and so it is dependent on when MIQ/CF outputs the requisite statistic to evm.log.
 
+This also calculates what I call /message latency/, or the time between when a message was /available/ to be dequeued and when it was actually dequeued. This
+differs slightly from the 'dequeue in' time from the logs as message latency accounts for the 'deliver on' date and time. Latency is reported as the difference
+between the log timestamp and the deliver on datetime, or the value of 'dequeued in', whichever is *smaller*.
+
 # Installing
+
+## Appliance Timezone
+
+I assume the log messages are arriving in UTC. If this isn't the case, you need to adjust the `timezone` parameter of the `date` filter plugin in the pipeline
+to read the timezone of your log messages.
 
 ## Input and Output
 

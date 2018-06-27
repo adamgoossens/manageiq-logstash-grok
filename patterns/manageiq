@@ -1,1 +1,1 @@
-MIQ_PREAMBLE %{DATE}T%{TIME}%{SPACE}#%{WORD:miq_worker_pid}:%{WORD:miq_worker_thread_id}%{NOTSPACE}%{SPACE}%{RUBY_LOGLEVEL:miq_loglevel}%{SPACE}%{NOTSPACE}%{SPACE}%{NOTSPACE}%{SPACE}%{NOTSPACE}%{WORD:miq_method}%{NOTSPACE}%{SPACE}
+MIQ_PREAMBLE %{TIMESTAMP_ISO8601:miq_timestamp}%{SPACE}#%{WORD:miq_worker_pid}:%{WORD:miq_worker_thread_id}%{NOTSPACE}%{SPACE}%{RUBY_LOGLEVEL:miq_loglevel}%{SPACE}%{NOTSPACE}%{SPACE}%{NOTSPACE}%{SPACE}%{NOTSPACE}%{WORD:miq_method}%{NOTSPACE}%{SPACE}
